@@ -20,7 +20,9 @@ class ViewController: UIViewController {
         
     }
     
-    
+    @objc func addButtonClicked() {
+        performSegue(withIdentifier: "toDetailsVC", sender: nil)
+    }
 
 
 }
