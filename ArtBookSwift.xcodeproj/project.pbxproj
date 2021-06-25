@@ -16,6 +16,7 @@
 		347F14E226864D710022C24A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347F14E026864D710022C24A /* LaunchScreen.storyboard */; };
 		347F14ED26864D710022C24A /* ArtBookSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F14EC26864D710022C24A /* ArtBookSwiftTests.swift */; };
 		347F14F826864D710022C24A /* ArtBookSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F14F726864D710022C24A /* ArtBookSwiftUITests.swift */; };
+		347F150626864E550022C24A /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F150526864E550022C24A /* DetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		347F14F326864D710022C24A /* ArtBookSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtBookSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		347F14F726864D710022C24A /* ArtBookSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtBookSwiftUITests.swift; sourceTree = "<group>"; };
 		347F14F926864D710022C24A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		347F150526864E550022C24A /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				347F14E026864D710022C24A /* LaunchScreen.storyboard */,
 				347F14E326864D710022C24A /* Info.plist */,
 				347F14DB26864D700022C24A /* ArtBookSwift.xcdatamodeld */,
+				347F150526864E550022C24A /* DetailsVC.swift */,
 			);
 			path = ArtBookSwift;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				347F14D726864D700022C24A /* ViewController.swift in Sources */,
 				347F14D326864D700022C24A /* AppDelegate.swift in Sources */,
 				347F14D526864D700022C24A /* SceneDelegate.swift in Sources */,
+				347F150626864E550022C24A /* DetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
