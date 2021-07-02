@@ -43,6 +43,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
         
+        fetchRequest.returnsObjectsAsFaults = false
+        
         
     }
     
