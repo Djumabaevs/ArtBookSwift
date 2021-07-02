@@ -30,9 +30,16 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imageView.image = info[.originalImage] as? UIImage
+    }
+    
     @objc func selectImage() {
         let picker = UIImagePickerController()
         picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
     }
     
     @objc func hideKeyboard() {
