@@ -17,6 +17,7 @@
 		347F14ED26864D710022C24A /* ArtBookSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F14EC26864D710022C24A /* ArtBookSwiftTests.swift */; };
 		347F14F826864D710022C24A /* ArtBookSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F14F726864D710022C24A /* ArtBookSwiftUITests.swift */; };
 		347F150626864E550022C24A /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F150526864E550022C24A /* DetailsVC.swift */; };
+		347F1508268F5E290022C24A /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 347F1507268F5E280022C24A /* select.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		347F14F726864D710022C24A /* ArtBookSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtBookSwiftUITests.swift; sourceTree = "<group>"; };
 		347F14F926864D710022C24A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		347F150526864E550022C24A /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		347F1507268F5E280022C24A /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = select.png; path = ../../../../Downloads/select.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				347F14D226864D700022C24A /* AppDelegate.swift */,
+				347F1507268F5E280022C24A /* select.png */,
 				347F14D426864D700022C24A /* SceneDelegate.swift */,
 				347F14D626864D700022C24A /* ViewController.swift */,
 				347F150526864E550022C24A /* DetailsVC.swift */,
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				347F14E226864D710022C24A /* LaunchScreen.storyboard in Resources */,
+				347F1508268F5E290022C24A /* select.png in Resources */,
 				347F14DF26864D710022C24A /* Assets.xcassets in Resources */,
 				347F14DA26864D700022C24A /* Main.storyboard in Resources */,
 			);
