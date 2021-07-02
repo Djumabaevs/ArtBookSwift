@@ -5,6 +5,7 @@
 //  Created by Bakyt Dzhumabaev on 25/6/21.
 //
 
+import CoreData
 import UIKit
 
 class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -49,8 +50,10 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
 
     @IBAction func saveButtonClicked(_ sender: Any) {
-        let appDelegate = UIApplication.shared
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
         
+        let newPainting = 
     }
     
 
