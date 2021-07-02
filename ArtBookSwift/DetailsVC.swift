@@ -54,7 +54,14 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         let context = appDelegate.persistentContainer.viewContext
         
         let newPainting = NSEntityDescription.insertNewObject(forEntityName: "Paintings", into: context)
+        
+        //Attributes
+        
+        newPainting
     }
+      
+        
+    
     
 
 }
