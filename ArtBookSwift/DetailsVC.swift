@@ -32,6 +32,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.originalImage] as? UIImage
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func selectImage() {
@@ -48,7 +49,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
 
     @IBAction func saveButtonClicked(_ sender: Any) {
-        
+        let appDelegate = UIApplication.shared
         
     }
     
