@@ -57,7 +57,10 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         
         //Attributes
         
-        newPainting
+        newPainting.setValue(nameText.text!, forKey: "name")
+        newPainting.setValue(artistText.text!, forKey: "artist")
+        
+        
     }
       
         
