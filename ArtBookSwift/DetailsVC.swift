@@ -69,6 +69,13 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         let data = imageView.image!.jpegData(compressionQuality: 0.5)
         
         newPainting.setValue(data, forKey: "image")
+        
+        do {
+            try context.save()
+            print("success")
+        } catch {
+            print("error")
+        }
     }
       
         
