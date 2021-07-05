@@ -45,7 +45,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         fetchRequest.returnsObjectsAsFaults = false
         
-        
+        do {
+            let results = try context.fetch(fetchRequest)
+            
+            for result in results as! [NSManagedObject] {
+                
+            }
+        }catch {
+            print("error")
+        }
     }
     
     @objc func addButtonClicked() {
