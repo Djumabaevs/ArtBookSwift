@@ -11,12 +11,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return nameArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = nameArray[indexPath.row]
         return cell
     }
     
@@ -53,7 +53,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.nameArray.append(name)
                 }
                 
+                if let id = result.value(forKey: "id") as? UUID {
+                    self.idArray.append(id)
+                }
                 
+                self.tableView.reloadData()
              }
         }catch {
             print("error")
