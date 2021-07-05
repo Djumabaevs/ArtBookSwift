@@ -9,17 +9,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nameArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = nameArray[indexPath.row]
-        return cell
-    }
-    
 
     @IBOutlet weak var tableView: UITableView!
     var nameArray = [String]()
@@ -34,6 +23,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         navigationController?.navigationBar.topItem?.rightBarButtonItem =
             UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addButtonClicked))
+        
+        getData()
         
     }
     
@@ -66,6 +57,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @objc func addButtonClicked() {
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return nameArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = nameArray[indexPath.row]
+        return cell
     }
 
 

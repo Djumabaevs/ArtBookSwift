@@ -76,10 +76,9 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         } catch {
             print("error")
         }
-    }
-      
         
-    
-    
+        self.navigationController?.popViewController(animated: true)
+    }
+
 
 }
