@@ -16,6 +16,8 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
+    var chosenPainting = ""
+    var chosenPaintingId: UUID?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,19 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         imageView.isUserInteractionEnabled = true
         let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage))
         imageView.addGestureRecognizer(imageTapRecognizer)
+        
+        //Core Data
+        if chosenPainting != "" {
+            
+            let stringUUID = chosenPaintingId?.uuidString
+            
+            print(stringUUID)
+            
+        } else {
+            nameText.text = ""
+            artistText.text = ""
+            yearTexxt.text = ""
+        }
         
     }
     
