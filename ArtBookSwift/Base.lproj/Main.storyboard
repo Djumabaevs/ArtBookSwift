@@ -80,7 +80,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJ9-zX-dEk">
-                                <rect key="frame" x="121" y="646" width="190" height="127"/>
+                                <rect key="frame" x="112" y="684" width="190" height="127"/>
                                 <state key="normal" title="SAVE"/>
                                 <connections>
                                     <action selector="saveButtonClicked:" destination="crJ-Sz-VCJ" eventType="touchUpInside" id="TuE-HB-phT"/>
@@ -112,6 +112,7 @@
                         <outlet property="artistText" destination="hUg-ak-w1h" id="2E6-qn-d89"/>
                         <outlet property="imageView" destination="0Wd-B5-bMo" id="8ms-hf-O3d"/>
                         <outlet property="nameText" destination="9Lp-lm-LLk" id="B5w-QI-cv8"/>
+                        <outlet property="saveButton" destination="HJ9-zX-dEk" id="rnX-TX-Pgt"/>
                         <outlet property="yearTexxt" destination="1EY-6o-gjn" id="IcG-dp-0yf"/>
                     </connections>
                 </viewController>

@@ -10,6 +10,7 @@ import UIKit
 
 class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var yearTexxt: UITextField!
     @IBOutlet weak var artistText: UITextField!
@@ -34,11 +35,53 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         //Core Data
         if chosenPainting != "" {
             
-            let stringUUID = chosenPaintingId?.uuidString
+            saveButton.isHidden = true
             
-            print(stringUUID)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
+            
+            let idString = chosenPaintingId?.uuidString
+            
+            fetchRequest.predicate = NSPredicate(format: "id = %@", idString!)
+            
+            fetchRequest.returnsObjectsAsFaults = false
+            
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                
+                if results.count > 0 {
+                        
+                    for result in results as! [NSManagedObject] {
+                        
+                        if let name = result.value(forKey: "name") as? String {
+                            nameText.text = name
+                        }
+                        if let artist = result.value(forKey: "artist") as? String {
+                            artistText.text = artist
+                        }
+                        if let year = result.value(forKey: "year") as? Int {
+                            yearTexxt.text = String(year)
+                        }
+                        if let imageData = result.value(forKey: "image") as? Data {
+                            let image = UIImage(data: imageData)
+                            imageView.image = image
+                        }
+                    }
+                }
+                
+            } catch {
+                print("error")
+                
+            }
             
         } else {
+            
+            saveButton.isHidden = false
+            saveButton.isEnabled = false
+            
             nameText.text = ""
             artistText.text = ""
             yearTexxt.text = ""
@@ -48,6 +91,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.originalImage] as? UIImage
+        saveButton.isEnabled = true
         self.dismiss(animated: true, completion: nil)
     }
     
